@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="303.0" prefWidth="410.0" style="-fx-background-color: #fff;" styleClass="paneFrame" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="84.0" layoutY="23.0" styleClass="h2" text="REGISTER NEW USER" textFill="#ff7350">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="42.0" layoutY="83.0" />
+      <TextField layoutX="230.0" layoutY="83.0" />
+      <TextField layoutX="43.0" layoutY="197.0" prefHeight="25.0" prefWidth="341.0" style="-fx-border-color: #E16E2B;" />
+      <Label layoutX="43.0" layoutY="65.0" styleClass="h6" text="Prenom" />
+      <Label layoutX="231.0" layoutY="65.0" styleClass="h6" text="Nom" />
+      <Label layoutX="43.0" layoutY="178.0" styleClass="h6" text="Role" />
+      <JFXButton layoutX="230.0" layoutY="252.0" prefHeight="30.0" prefWidth="56.0" styleClass="primary_btn" text="SAVE" textFill="WHITE" />
+      <JFXButton layoutX="304.0" layoutY="252.0" prefHeight="30.0" prefWidth="77.0" styleClass="cancel_btn" text="CANCEL" textFill="WHITE" />
+      <Label layoutX="376.0" layoutY="15.0" text="X">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField layoutX="41.0" layoutY="140.0" />
+      <Label layoutX="40.0" layoutY="121.0" styleClass="h6" text="Nom utilisateur" />
+      <PasswordField editable="false" layoutX="231.0" layoutY="138.0" text="pass" />
+      <Label layoutX="232.0" layoutY="121.0" styleClass="h6" text="Mot de passe" />
+      <ComboBox layoutX="43.0" layoutY="198.0" prefHeight="22.0" prefWidth="341.0" />
+   </children>
+</AnchorPane>

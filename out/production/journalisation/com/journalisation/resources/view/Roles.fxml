@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="744.0" styleClass="paneFrame" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.controller.RolesController">
+   <children>
+      <Label fx:id="panLabel1" layoutX="204.0" layoutY="32.0" styleClass="h2" text="ENREGISTRER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="panLabel2" layoutX="384.0" layoutY="32.0" styleClass="h2" text="NOUVEAU ROLE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TabPane fx:id="wizard" layoutX="371.0" layoutY="124.0" prefHeight="403.0" prefWidth="720.0" styleClass="pane_register" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="64.0">
+         <tabs>
+            <Tab fx:id="about" closable="false" text="ABOUT">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="727.0">
+                     <children>
+                        <Label fx:id="permissionLabel" layoutX="41.0" layoutY="45.0" styleClass="h6" text="Permissions" textFill="#000000f5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="abbr" layoutX="41.0" layoutY="183.0" prefHeight="24.0" prefWidth="615.0" style="-fx-background-color: #fff; -fx-border-radius: 5;" />
+                        <Label fx:id="nameLabel" layoutX="41.0" layoutY="101.0" styleClass="h6" text="Role Name" textFill="#000000f5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="name" layoutX="41.0" layoutY="125.0" prefHeight="24.0" prefWidth="614.0" style="-fx-background-color: #fff; -fx-border-radius: 5;" />
+                        <Label fx:id="abbrLabel" layoutX="42.0" layoutY="163.0" styleClass="h6" text="Abbreviation" textFill="#000000f5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="next0" contentDisplay="RIGHT" layoutX="662.0" layoutY="363.0" ripplerFill="#134153" styleClass="primary_btn" text="Next" textFill="WHITE" AnchorPane.rightAnchor="4.0">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_RIGHT" />
+                           </graphic>
+                        </JFXButton>
+                        <ComboBox fx:id="permission" layoutX="41.0" layoutY="65.0" prefHeight="24.0" prefWidth="613.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="ROLE" closable="false" text="ROLE ACCESS">
+              <content>
+                <AnchorPane fx:id="role_menu" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="assign1" layoutX="14.0" layoutY="14.0" text="Roles">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="done" contentDisplay="RIGHT" layoutX="659.0" layoutY="363.0" ripplerFill="#134153" styleClass="primary_btn" text="Finish" textFill="WHITE" />
+                        <JFXButton fx:id="previous1" layoutX="14.0" layoutY="363.0" ripplerFill="#134153" styleClass="primary_btn" text="Previous" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_LEFT" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <JFXButton layoutX="697.0" layoutY="25.0" onAction="#close" text="X" />
+   </children>
+</AnchorPane>

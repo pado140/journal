@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<AnchorPane prefHeight="527.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.resources.view.Recherche">
+   <children>
+      <HBox layoutX="30.0" layoutY="32.0" spacing="40.0">
+         <children>
+            <RadioButton mnemonicParsing="false" text="Par titre" />
+            <RadioButton mnemonicParsing="false" text="Par Auteur" />
+            <RadioButton mnemonicParsing="false" text="Par Genre" />
+            <RadioButton mnemonicParsing="false" text="Date" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="mainFrame" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.controller.MainController">
+   <top>
+      <HBox prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #f2f2f2;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #fff;">
+               <children>
+                  <ImageView cache="true" fitHeight="42.0" fitWidth="150.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/logo%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="250.0" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" stylesheets="@../css/style.css" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fx:id="username" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
+                  <ImageView fitHeight="66.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/dropdown.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" right="40.0" />
+               </padding>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane id="main_panel" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="29.0" prefWidth="1166.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="4.0" text="Title">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="main_panel" layoutX="2.0" layoutY="29.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="29.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane fx:id="navleft" prefHeight="200.0" prefWidth="200.0" styleClass="left_pane" stylesheets="@../css/style.css" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>

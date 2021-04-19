@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="content" prefHeight="504.0" prefWidth="600.0" styleClass="paneFrame" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.controller.NewTaskProjectController">
+   <children>
+      <JFXButton layoutX="551.0" layoutY="30.0" onAction="#close" text="X" />
+      <Label layoutX="162.0" layoutY="23.0" prefHeight="38.0" prefWidth="277.0" styleClass="h2" text="Assignation de taches">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="169.0" styleClass="h6" text="Utilisateur:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="36.0" layoutY="66.0" styleClass="h6" text="Taches:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="375.0" layoutY="63.0" styleClass="h6" text="Durée:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Spinner fx:id="duree" editable="true" layoutX="375.0" layoutY="86.0" prefHeight="27.0" prefWidth="90.0" />
+      <HBox alignment="CENTER_RIGHT" layoutX="209.0" layoutY="447.0" prefHeight="27.0" prefWidth="373.0" spacing="20.0">
+         <children>
+            <JFXButton onAction="#save" styleClass="primary_btn" text="Enregistrer" textFill="WHITE" />
+            <JFXButton onAction="#savennew" styleClass="primary_btn" text="Enregistrer et continuer" textFill="WHITE" />
+            <JFXButton onAction="#cancel" styleClass="cancel_btn" text="Annuler" textFill="WHITE" />
+         </children>
+      </HBox>
+      <Label layoutX="477.0" layoutY="83.0" prefHeight="27.0" prefWidth="28.0" text="Jours" />
+      <Line endX="458.0" layoutX="121.0" layoutY="60.0" startX="-100.0" />
+      <TextArea fx:id="tasktext" layoutX="35.0" layoutY="86.0" prefHeight="81.0" prefWidth="317.0" />
+   </children>
+</AnchorPane>

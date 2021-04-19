@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+    <Menu>
+        <MenuBlock  name="acceuil" >
+            <Item action="Home" icon="horizontal/dash.png" name="tableau_de_bord"/>
+            <separator/>
+            <Item action="close" icon="horizontal/close.png" name="fermer"/>
+        </MenuBlock>
+        <MenuBlock name="Cutting">
+            <Item action="switchCutplan" icon="horizontal/product_new.png" name="Cutplan &amp; Marker"/>
+            <Item action="product" icon="horizontal/products.png" name="Cutting Production"/>
+            <separator/>
+            <Item action="" icon="horizontal/alerth.png" name="Fabric Consumption"/>
+            <Item action="switchStock" icon="horizontal/report.png" name="Fabric Report"/>
+            <separator/>
+            <Item action="switchStock" icon="horizontal/report.png" name="Rapports"/>
+        </MenuBlock>
+        <MenuBlock name="Wip Process">
+            <Item action="switchAchatProduit" icon="horizontal/achat.png" name="Transfer to Soabar"/>
+            <Item action="" icon="" name="Transfer to Pad Print"/>
+            <separator/>
+            <Item action="switchSup" icon="horizontal/supplier.png" name="Transfer to Sewing"/>
+            <Item action="" icon="facture.png" name="Send to Module"/>
+            <Item action="" icon="" name="Scan Production"/>
+            <Item action="switch_report_achat" icon="horizontal/report.png" name="Post Sewing"/>
+        </MenuBlock>
+        <MenuBlock name="Donnée Management">
+            <Item action="switchStyle" icon="horizontal/style.png" name="Styles"/>
+            <separator/>
+            <Item action="switchCustomers" icon="horizontal/customers.png" name="Clients"/>
+            <separator/>
+            <Item action="switchPart" icon="horizontal/cutpart.png" name="composants"/>
+            <separator/>
+            <Item action="switchcolors" icon="horizontal/colors.png" name="Couleurs"/>
+            <separator/>
+            <Item action="switchSize" icon="horizontal/measure.png" name="Tailles"/>
+            <separator/>
+            <Item action="switchFabric" icon="horizontal/tissus.png" name="Tissus"/>
+        </MenuBlock>
+        <MenuBlock name="setup">
+            <Item action="switchVentes" icon="" name="um"/>
+            <Item action="" icon="" name="categorie"/>
+        </MenuBlock>
+        <MenuBlock name="parametres">
+            <Item action="switchGroup" icon="horizontal/user-setting.png" name="user setting"/>
+            <Item action="switchSetting" icon="horizontal/setting.png" name="setting"/>
+            <Item action="switchSetting" icon="horizontal/setting.png" name="setting"/>
+        </MenuBlock>
+</Menu>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Database name="journalisation">
+    <tables>
+        <table name="">
+            <columns></columns>
+            <datas>
+                <val/>
+            </datas>
+        </table>
+    </tables>
+</Database>

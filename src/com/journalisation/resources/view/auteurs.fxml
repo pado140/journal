@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="473.0" prefWidth="898.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.controller.AuteurController">
+   <children>
+      <AnchorPane prefHeight="69.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="290.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton layoutX="504.0" layoutY="22.0" onAction="#newAuteur" styleClass="primary_btn" text="Nouveau Auteur" textFill="WHITE" AnchorPane.rightAnchor="25.0" />
+            <TextField layoutX="14.0" layoutY="22.0" onKeyReleased="#search" prefHeight="27.0" prefWidth="268.0" promptText="Rechercher un auteur" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="table_auteurs" layoutX="7.0" layoutY="69.0" prefHeight="200.0" prefWidth="200.0" styleClass="tabs" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="290.0" AnchorPane.topAnchor="69.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="nom" prefWidth="137.0" text="NOM" />
+            <TableColumn fx:id="prenom" prefWidth="102.0" text="PRENOM" />
+            <TableColumn fx:id="notice" prefWidth="221.0" text="NOTICE" />
+            <TableColumn fx:id="actions" editable="false" prefWidth="75.0" sortable="false" text="Actions" />
+        </columns>
+      </TableView>
+      <AnchorPane prefHeight="400.0" prefWidth="289.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="96.0" layoutY="23.0" styleClass="h1" text="Details" />
+            <AnchorPane layoutX="49.0" layoutY="68.0" styleClass="card-view">
+               <children>
+                  <ImageView fx:id="image" fitHeight="144.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="57.0" layoutY="221.0" styleClass="h6_bold" text="Nom:" />
+            <Label fx:id="name" layoutX="151.0" layoutY="218.0" styleClass="h5" text="Label" />
+            <Label layoutX="58.0" layoutY="247.0" styleClass="h6_bold" text="Prénom:" />
+            <Label fx:id="firstname" layoutX="151.0" layoutY="244.0" styleClass="h5" text="Label" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

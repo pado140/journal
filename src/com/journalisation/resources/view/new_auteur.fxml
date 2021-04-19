@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="content" prefHeight="406.0" prefWidth="613.0" styleClass="paneFrame" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.controller.NewAuteurController">
+   <children>
+      <Label layoutX="78.0" layoutY="28.0" styleClass="h3" text="Enregistrer un nouveau Auteur" textFill="#ff7350">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nom" layoutX="52.0" layoutY="93.0" prefHeight="30.0" prefWidth="316.0" />
+      <Label layoutX="53.0" layoutY="75.0" styleClass="h6" text="Nom" />
+      <JFXButton layoutX="236.0" layoutY="345.0" onAction="#save" prefHeight="30.0" prefWidth="56.0" styleClass="primary_btn" text="SAVE" textFill="WHITE" />
+      <JFXButton layoutX="310.0" layoutY="345.0" onAction="#cancel" prefHeight="30.0" prefWidth="77.0" styleClass="cancel_btn" text="CANCEL" textFill="WHITE" />
+      <Label layoutX="576.0" layoutY="13.0" onMouseClicked="#closed" text="X">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="prenom" layoutX="51.0" layoutY="153.0" prefHeight="30.0" prefWidth="316.0" />
+      <Label layoutX="52.0" layoutY="135.0" styleClass="h6" text="Prenom" />
+      <Label layoutX="52.0" layoutY="192.0" styleClass="h6" text="Notice" />
+      <TextArea fx:id="notice" layoutX="52.0" layoutY="209.0" prefHeight="127.0" prefWidth="316.0" />
+      <VBox alignment="CENTER" layoutX="424.0" layoutY="60.0">
+         <children>
+            <AnchorPane styleClass="card-view">
+               <children>
+                  <ImageView fx:id="auteur_image" fitHeight="150.0" fitWidth="163.0" layoutX="11.0" layoutY="11.0" onMouseClicked="#upload" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <Hyperlink alignment="CENTER" onAction="#upload" text="Telecharger une image" textAlignment="CENTER" />
+            <Hyperlink alignment="CENTER" onAction="#remove" text="Supprimer l'image" textAlignment="CENTER" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

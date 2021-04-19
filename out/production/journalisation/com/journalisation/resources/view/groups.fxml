@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane styleClass="pane_register" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.controller.GroupsController">
+   <tabs>
+      <Tab closable="false" text="Utilisateurs">
+         <content>
+            <AnchorPane id="AnchorPane" prefHeight="491.0" prefWidth="863.0" styleClass="mainFxmlClass">
+               <children>
+                  <AnchorPane layoutX="-9.0" pickOnBounds="false" prefHeight="111.0" prefWidth="1095.0" styleClass="second_header" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="12.0" layoutY="39.0" prefHeight="39.0" prefWidth="167.0" styleClass="h3" text="Utilisateurs" textFill="WHITE" AnchorPane.leftAnchor="12.0">
+                           <font>
+                              <Font name="Arial Black" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="201.0" layoutY="39.0" onKeyReleased="#filterUser" prefHeight="39.0" prefWidth="331.0" promptText="Rechercher utilisateur" AnchorPane.leftAnchor="201.0" />
+                        <JFXButton fx:id="newUser" layoutX="718.0" layoutY="40.0" onAction="#new_user" styleClass="primary_btn" text=" + Ajouter Utilisateur" textFill="#f5f2f2" AnchorPane.rightAnchor="7.0">
+
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <TableView fx:id="tab_users" fixedCellSize="0.0" layoutX="7.0" layoutY="111.0" prefHeight="379.0" prefWidth="856.0" styleClass="tabs" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="112.0">
+                     <columns>
+                        <TableColumn fx:id="fullname" editable="false" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Nom complet" />
+                        <TableColumn fx:id="sexe" editable="false" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Sexe" />
+                        <TableColumn fx:id="grouptab" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Groupe" />
+                        <TableColumn fx:id="username" maxWidth="-1.0" minWidth="120.0" prefWidth="-1.0" text="Nom Utilisateur" />
+                        <TableColumn fx:id="mail" maxWidth="1.7976931348623157E308" minWidth="120.0" prefWidth="-1.0" resizable="false" text="Mail" />
+                        <TableColumn fx:id="actions" maxWidth="220.0" minWidth="120.0" prefWidth="220.0" text="Actions" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Groupe">
+         <content>
+            <AnchorPane id="AnchorPane" prefHeight="491.0" prefWidth="863.0" styleClass="mainFxmlClass">
+               <children>
+                  <AnchorPane layoutX="-9.0" pickOnBounds="false" prefHeight="111.0" prefWidth="1095.0" styleClass="second_header" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="26.0" layoutY="39.0" prefHeight="39.0" prefWidth="182.0" styleClass="h3" text="Groupe Utilisateur" textFill="WHITE" AnchorPane.leftAnchor="7.0">
+                           <font>
+                              <Font name="Arial Black" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="201.0" layoutY="39.0" onKeyReleased="#filterGroup" prefHeight="39.0" prefWidth="331.0" promptText="Rechercher groupe" AnchorPane.leftAnchor="201.0" />
+                        <JFXButton fx:id="newGroup" layoutX="718.0" layoutY="40.0" onAction="#new_group" styleClass="primary_btn" text=" + Ajouter Groupe" textFill="#f5f2f2" AnchorPane.rightAnchor="7.0">
+
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <TableView fx:id="tab_group" fixedCellSize="0.0" layoutY="111.0" prefHeight="509.0" prefWidth="779.0" styleClass="tabs" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="112.0">
+                     <columns>
+                        <TableColumn fx:id="name" editable="false" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Nom" />
+                        <TableColumn fx:id="description" editable="false" maxWidth="1.7976931348623157E308" minWidth="223.0" prefWidth="-1.0" text="Description" />
+                        <TableColumn fx:id="action" maxWidth="-1.0" minWidth="200.0" prefWidth="-1.0" text="Actions" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Accès">
+         <content>
+            <AnchorPane id="AnchorPane" prefHeight="491.0" prefWidth="863.0" styleClass="mainFxmlClass">
+               <children>
+                  <AnchorPane layoutX="-9.0" pickOnBounds="false" prefHeight="111.0" prefWidth="1095.0" styleClass="second_header" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="26.0" layoutY="39.0" prefHeight="39.0" prefWidth="167.0" styleClass="h3" text="Accès" textFill="WHITE" AnchorPane.leftAnchor="7.0">
+                           <font>
+                              <Font name="Arial Black" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="201.0" layoutY="39.0" onKeyReleased="#filterRole" prefHeight="39.0" prefWidth="331.0" promptText="Rechercher accès" AnchorPane.leftAnchor="201.0" />
+                        <JFXButton fx:id="newRole" layoutX="718.0" layoutY="40.0" onAction="#new_role" styleClass="primary_btn" text=" + Ajouter Accès" textFill="#f5f2f2" AnchorPane.rightAnchor="7.0">
+
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <TableView fx:id="tab_roles" fixedCellSize="0.0" layoutY="111.0" prefHeight="509.0" prefWidth="779.0" styleClass="tabs" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="112.0">
+                     <columns>
+                        <TableColumn fx:id="name_role" editable="false" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Nom" />
+                        <TableColumn fx:id="abbreviation" editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="-1.0" text="Abbreviation" />
+                        <TableColumn fx:id="roleActions" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="154.0" text="Actions" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="744.0" styleClass="paneFrame" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.controller.RegisterController">
+   <children>
+      <Label fx:id="panLabel1" layoutX="143.0" layoutY="22.0" styleClass="h2" text="ENREGISTREMENT">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="panLabel2" layoutX="374.0" layoutY="22.0" styleClass="h2" text="Nouveau Utilisateur">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="pandecription" layoutX="138.0" layoutY="57.0" styleClass="h6" text="Ces Informations nous permettra d'avoir les informations vous concernant" textFill="#756d6dee">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TabPane fx:id="wizard" layoutX="361.0" layoutY="114.0" styleClass="pane_register" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="85.0">
+         <tabs>
+            <Tab fx:id="about" closable="false" text="à Propos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="727.0">
+                     <children>
+                        <Label fx:id="aboutLabel" layoutX="213.0" layoutY="2.0" styleClass="h6" text="Commençons avec les informations de base" textFill="#6f6d6df5">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="firstNameLabel" layoutX="41.0" layoutY="60.0" styleClass="h6" text="Prénom" textFill="#000000f5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="fname" layoutX="41.0" layoutY="84.0" prefHeight="25.0" prefWidth="255.0" style="-fx-background-color: #fff; -fx-border-radius: 5;" />
+                        <Label fx:id="lastNameLabel" layoutX="41.0" layoutY="121.0" styleClass="h6" text="Nom" textFill="#000000f5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="lname" layoutX="41.0" layoutY="145.0" prefHeight="25.0" prefWidth="255.0" style="-fx-background-color: #fff; -fx-border-radius: 5;" />
+                        <Label fx:id="birthLabel" layoutX="42.0" layoutY="183.0" styleClass="h6" text="Date de naissance" textFill="#000000f5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="bdate" layoutX="42.0" layoutY="211.0" prefHeight="25.0" prefWidth="260.0" style="-fx-background-color: #fff; -fx-border-radius: 5;" />
+                        <JFXButton fx:id="next0" contentDisplay="RIGHT" layoutX="662.0" layoutY="334.0" ripplerFill="#fcab9bad" styleClass="primary_btn" text="Suivant" textFill="WHITE" AnchorPane.rightAnchor="4.0">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_RIGHT" />
+                           </graphic>
+                        </JFXButton>
+                        <Label fx:id="telLabel" layoutX="430.0" layoutY="60.0" styleClass="h6" text="Telephone" textFill="#000000f5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tel" layoutX="430.0" layoutY="84.0" prefHeight="25.0" prefWidth="255.0" style="-fx-background-color: #fff; -fx-border-radius: 5;" />
+                        <Line endX="115.0" layoutX="352.0" layoutY="189.0" rotate="90.0" startX="-115.0" strokeWidth="0.5" />
+                        <Label fx:id="mailLabel" layoutX="430.0" layoutY="121.0" styleClass="h6" text="E-mail" textFill="#000000f5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="mail" layoutX="430.0" layoutY="145.0" prefHeight="25.0" prefWidth="255.0" style="-fx-background-color: #fff; -fx-border-radius: 5;" />
+                        <Label fx:id="sexeLabel" layoutX="430.0" layoutY="183.0" styleClass="h6" text="Sexe" textFill="#000000f5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="sexe" layoutX="430.0" layoutY="213.0" prefHeight="25.0" prefWidth="257.0" />
+                        <Label fx:id="addressLabel" layoutX="430.0" layoutY="252.0" styleClass="h6" text="Addresse" textFill="#000000f5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="address" layoutX="430.0" layoutY="276.0" prefHeight="25.0" prefWidth="255.0" style="-fx-background-color: #fff; -fx-border-radius: 5;" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="account" closable="false" text="Compte">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="usernameLabel" layoutX="89.0" layoutY="41.0" styleClass="h6" text="Nom d'utilisateur" textFill="#000000f5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="username" layoutX="88.0" layoutY="68.0" prefHeight="27.0" prefWidth="244.0" style="-fx-background-color: #fff; -fx-border-radius: 5;" />
+                        <Label fx:id="passLabel" layoutX="89.0" layoutY="109.0" styleClass="h6" text="Mot de Passe" textFill="#000000f5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="pass" editable="false" layoutX="89.0" layoutY="140.0" prefHeight="27.0" prefWidth="242.0" style="-fx-background-color: #fff; -fx-border-radius: 5;" text="pass" />
+                        <Label fx:id="cPassLabel" layoutX="91.0" layoutY="176.0" styleClass="h6" text="Confirmation du mot de passe" textFill="#000000f5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="cPass" editable="false" layoutX="89.0" layoutY="208.0" prefHeight="27.0" prefWidth="242.0" style="-fx-background-color: #fff; -fx-border-radius: 5;" text="pass" />
+                        <Line endX="100.0" layoutX="398.0" layoutY="167.0" rotate="90.0" startX="-100.0" strokeWidth="0.5" />
+                        <JFXButton fx:id="previous1" layoutX="11.0" layoutY="335.0" ripplerFill="#fcab9bad" styleClass="primary_btn" text="Precedent" textFill="WHITE" AnchorPane.leftAnchor="8.0">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_LEFT" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="done" contentDisplay="RIGHT" layoutX="643.0" layoutY="335.0" ripplerFill="#fcab9bad" styleClass="primary_btn" text="Terminé" textFill="WHITE" AnchorPane.rightAnchor="14.0">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CHECK" />
+                           </graphic>
+                        </JFXButton>
+                        <Label fx:id="usernameLabel1" layoutX="443.0" layoutY="41.0" styleClass="h6" text="Groupe" textFill="#000000f5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="group" layoutX="443.0" layoutY="69.0" prefHeight="25.0" prefWidth="244.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <JFXButton layoutX="702.0" layoutY="22.0" onAction="#close" text="X" AnchorPane.rightAnchor="18.0" />
+
+   </children>
+</AnchorPane>

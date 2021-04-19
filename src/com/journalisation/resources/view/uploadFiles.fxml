@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="350.0" prefWidth="840.0" styleClass="paneFrame" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.controller.UploadController">
+
+    <AnchorPane layoutX="21.0" layoutY="48.0" prefHeight="252.0" prefWidth="794.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="12.0">
+        <children>
+            <Label layoutX="27.0" text="Fichiers du projet">
+                <font>
+                    <Font name="System Bold" size="14.0" />
+                </font>
+            </Label>
+            <AnchorPane fx:id="loader" layoutX="26.0" layoutY="26.0" onDragDropped="#load" prefHeight="226.0" prefWidth="427.0" style="-fx-background-color: #f2f2f2; -fx-border-style: dashed;" stylesheets="@../css/style.css">
+                <children>
+                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/undraw_add_file2_gvbb%20(1)%20(1).png" />
+                        </image>
+                    </ImageView>
+                    <Label layoutX="155.0" layoutY="64.0" text="Selectionner fichiers">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="155.0" layoutY="102.0" styleClass="h6" text="Draguez les fichiers ici ou cliquez" />
+                    <Hyperlink layoutX="362.0" layoutY="101.0" onAction="#open" text="Parcourir" />
+                </children>
+            <styleClass>
+               <String fx:value="draggable_area" />
+               <String fx:value="primary" />
+            </styleClass>
+            </AnchorPane>
+            <ListView fx:id="listFiles" layoutX="460.0" layoutY="26.0" prefHeight="226.0" prefWidth="308.0" />
+         <JFXButton layoutX="781.0" layoutY="6.0" onAction="#close" styleClass="closable" text="X" />
+        </children>
+    </AnchorPane>
+   <JFXButton layoutX="722.0" layoutY="280.0" onAction="#upload" text="Telecharger">
+      <styleClass>
+         <String fx:value="h6_bold" />
+         <String fx:value="primary" />
+      </styleClass></JFXButton>
+
+</AnchorPane>

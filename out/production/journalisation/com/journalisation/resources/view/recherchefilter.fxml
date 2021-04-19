@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="762.0" style="-fx-background-color: #f6f6f6;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.controller.SearchController">
+   <children>
+      <Label layoutX="23.0" layoutY="11.0" styleClass="h2" text="Recherche" />
+      <AnchorPane layoutX="27.0" layoutY="67.0" minHeight="92.0" prefHeight="92.0" prefWidth="695.0" style="-fx-background-color: #fff; -fx-border-color: #eed; -fx-background-radius: 10; -fx-border-radius: 10;" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="40.0">
+         <children>
+            <Label layoutX="17.0" layoutY="6.0" prefHeight="21.0" prefWidth="43.0" styleClass="h6_bold" text="Filtres" />
+            <FlowPane hgap="40.0" layoutX="18.0" layoutY="64.0" prefHeight="114.0" prefWidth="661.0" vgap="25.0" AnchorPane.bottomAnchor="234.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="63.0">
+               <children>
+                  <CheckBox fx:id="select_auteur" contentDisplay="RIGHT" mnemonicParsing="false" styleClass="h6" text="Auteur" visible="false" />
+                  <CheckBox fx:id="select_titre" mnemonicParsing="false" styleClass="h6" text="Titre" visible="false" />
+                  <CheckBox fx:id="select_date" contentDisplay="RIGHT" mnemonicParsing="false" styleClass="h6" text="Date" visible="false" />
+                  <CheckBox fx:id="select_graph" mnemonicParsing="false" styleClass="h6" text="Graphiste" visible="false" />
+                  <CheckBox fx:id="select_correcteur" mnemonicParsing="false" styleClass="h6" text="Correcteur" visible="false" />
+                  <CheckBox fx:id="select_gender" mnemonicParsing="false" styleClass="h6" text="Genre" visible="false" />
+               </children>
+            </FlowPane>
+            <HBox alignment="CENTER" layoutX="323.0" layoutY="10.0" prefHeight="38.0" prefWidth="350.0" spacing="10.0" AnchorPane.rightAnchor="22.0">
+               <children>
+                  <TextField fx:id="search_field" onKeyReleased="#searchtype" prefHeight="27.0" prefWidth="347.0" promptText="Recherche par titre,genre, auteur" style="-fx-background-color: transparent; -fx-border-color: #F37F00; -fx-border-radius: 10;" />
+                  <JFXButton onAction="#search" visible="false">
+                     <graphic>
+                        <ImageView fitHeight="42.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/searchbutton.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="table_list" layoutX="27.0" layoutY="164.0" prefHeight="388.0" prefWidth="695.0" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="164.0">
+        <columns>
+          <TableColumn fx:id="titre" prefWidth="75.0" text="Titre" />
+          <TableColumn fx:id="genre" prefWidth="75.0" text="Genre" />
+            <TableColumn fx:id="date" editable="false" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="write" editable="false" prefWidth="75.0" text="Ecrit par" />
+            <TableColumn fx:id="lead" editable="false" prefWidth="75.0" text="Diriger par" />
+            <TableColumn fx:id="graphist" editable="false" prefWidth="75.0" text="Graphiste / Correcteur" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

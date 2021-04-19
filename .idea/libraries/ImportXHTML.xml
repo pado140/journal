@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="ImportXHTML">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/optional/ImportXHTML/itext-2.1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/ImportXHTML/xhtmlrenderer-3.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/ImportXHTML/docx4j-ImportXHTML-8.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+    <Menu>
+        <MenuItem canExpand="false" action="Home" icon="dashboard.png" name="Tableau de bord" pin="false" id="@dash"/>
+        <MenuItem canExpand="true"  icon="documents.png" name="Projets" pin="false" id="@doc_mod">
+            <Item action="projet" name="liste Projet" icon="list.png" id="@docs"/>
+            <Item action="newProject" name="Nouveau Projet" icon="documents.png" id="@doc_new"/>
+            <Item action="searchFilter" name="Recherche Projet" icon="searchProject.png" id="@search"/>
+        </MenuItem>
+        <MenuItem canExpand="false" action="report" icon="" name="Télécharger rapport" pin="false" id="@exp"/>
+        <MenuItem canExpand="false" action="genres" icon="category.png" name="Genre" pin="false" id="@genre"/>
+        <MenuItem canExpand="false" action="auteurs" icon="writer.png" name="Auteur" pin="false" id="@auteurs"/>
+        <!--MenuItem canExpand="false" action="task" icon="tasklist.png" name="Taches" pin="false" id="@tache"/-->
+        <MenuItem canExpand="false" action="user" icon="user_setting.png" name="Utilisateurs" pin="false" id="@user"/>
+        <MenuItem canExpand="false" action="transactions" icon="history.png" name="Historicités" pin="false" id="@transaction"/>
+        <MenuItem canExpand="false" action="setting" icon="setting.png" name="setting" pin="false" id="@settup"/>
+        <MenuItem canExpand="false" action="logout" icon="signout.png" name="Log out" pin="true" id="@"/>
+    </Menu>

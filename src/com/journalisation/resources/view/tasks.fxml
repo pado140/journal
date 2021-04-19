@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.controller.TaskController">
+   <children>
+      <AnchorPane prefHeight="69.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton layoutX="504.0" layoutY="22.0" onAction="#newTask" styleClass="primary_btn" text="Nouvelle Tache" textFill="WHITE" AnchorPane.rightAnchor="25.0" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="table_tasks" layoutX="7.0" layoutY="69.0" prefHeight="200.0" prefWidth="200.0" styleClass="tabs" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="69.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="task" prefWidth="137.0" text="TASK" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

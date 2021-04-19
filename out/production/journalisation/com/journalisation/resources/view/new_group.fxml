@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="744.0" styleClass="paneFrame" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.controller.New_groupController">
+    <stylesheets>
+        <URL value="@../css/style.css" />
+    </stylesheets>
+   <children>
+      <Label fx:id="panLabel1" layoutX="276.0" layoutY="42.0" styleClass="h2" text="REGISTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="panLabel2" layoutX="394.0" layoutY="42.0" styleClass="h2" text="NEW GROUP">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TabPane fx:id="wizard" layoutX="381.0" layoutY="134.0" styleClass="pane_register" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="74.0">
+         <tabs>
+            <Tab fx:id="about" closable="false" text="ABOUT">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="727.0">
+                     <children>
+                        <Label fx:id="groupNameLabel" layoutX="41.0" layoutY="15.0" styleClass="h6" text="Group Name" textFill="#000000f5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="gname" layoutX="41.0" layoutY="39.0" prefHeight="24.0" prefWidth="614.0" style="-fx-background-color: #fff; -fx-border-radius: 5;" />
+                        <Label fx:id="descLabel" layoutX="42.0" layoutY="73.0" styleClass="h6" text="Description" textFill="#000000f5">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="next0" contentDisplay="RIGHT" layoutX="662.0" layoutY="249.0" ripplerFill="#134153" styleClass="primary_btn" text="Next" textFill="WHITE" AnchorPane.rightAnchor="4.0" />
+                        <TextArea fx:id="desc" layoutX="42.0" layoutY="91.0" prefHeight="97.0" prefWidth="613.0" style="-fx-background-color: #fff;" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="roles" closable="false" text="ROLES">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="720.0">
+                     <children>
+                        <JFXButton fx:id="done" contentDisplay="RIGHT" layoutX="669.0" layoutY="250.0" ripplerFill="#134153" styleClass="primary_btn" text="Finish" textFill="WHITE" AnchorPane.rightAnchor="4.0" />
+                        <JFXButton fx:id="previous1" layoutX="12.0" layoutY="251.0" ripplerFill="#134153" styleClass="primary_btn" text="Previous" textFill="WHITE" AnchorPane.leftAnchor="12.0">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_LEFT" />
+                           </graphic>
+                        </JFXButton>
+                        <Label layoutX="10.0" layoutY="6.0" text="Roles">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <JFXButton layoutX="698.0" layoutY="17.0" onAction="#close" text="X" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,34 @@
+<component name="libraryTable">
+  <library name="export-fo">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/batik-i18n-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/fop-util-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/batik-gvt-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/batik-svg-dom-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/docx4j-export-fo-8.1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/batik-util-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/batik-bridge-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/fop-events-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/batik-script-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/jai-core-1.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/batik-anim-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/batik-parser-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/jai-codec-1.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/batik-xml-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/fop-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/fontbox-2.0.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/batik-css-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/batik-ext-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/batik-transcoder-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/fop-core-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/batik-svggen-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/jaxb-xslfo-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/batik-awt-util-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/batik-extension-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/batik-constants-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/optional/export-fo/batik-dom-1.12.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

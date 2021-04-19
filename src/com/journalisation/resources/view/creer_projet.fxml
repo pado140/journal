@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="content" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="874.0" prefWidth="1062.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.controller.NewProjectController">
+   <children>
+      <Label layoutX="389.0" layoutY="-1.0" styleClass="h1" text="Creer un Projet">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="18.0" layoutY="48.0" prefHeight="169.0" prefWidth="1003.0" style="-fx-background-color: #fff; -fx-background-radius: 10; -fx-border-color: #ccc; -fx-border-radius: 10;">
+         <children>
+            <Label layoutX="27.0" layoutY="4.0" styleClass="h5" text="A propos de ce projet">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label cache="true" layoutX="42.0" layoutY="35.0" styleClass="h6" text="Titre" />
+            <TextField fx:id="titre" cache="true" layoutX="42.0" layoutY="53.0" prefHeight="25.0" prefWidth="237.0" />
+            <Label layoutX="323.0" layoutY="35.0" styleClass="h6" text="Sous-titre" />
+            <TextField fx:id="sous_titre" layoutX="323.0" layoutY="53.0" prefHeight="25.0" prefWidth="237.0" />
+            <Label layoutX="597.0" layoutY="35.0" styleClass="h6" text="Date de reception" />
+            <DatePicker fx:id="receipt" layoutX="597.0" layoutY="53.0" prefHeight="25.0" prefWidth="237.0" />
+            <Label layoutX="43.0" layoutY="96.0" styleClass="h6" text="Genre" />
+            <ComboBox fx:id="genre" layoutX="42.0" layoutY="117.0" prefHeight="25.0" prefWidth="237.0" />
+            <Label layoutX="323.0" layoutY="99.0" styleClass="h6" text="Format " />
+            <TextField fx:id="format" layoutX="323.0" layoutY="117.0" prefHeight="25.0" prefWidth="237.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="18.0" layoutY="251.0" prefHeight="267.0" prefWidth="1003.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="38.0" layoutY="4.0" styleClass="h5" text="Les Auteurs">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="ecrit" layoutX="41.0" layoutY="52.0" prefHeight="200.0" prefWidth="416.0" />
+            <AnchorPane fx:id="dirige" layoutX="511.0" layoutY="52.0" prefHeight="200.0" prefWidth="416.0" />
+            <Label layoutX="40.0" layoutY="33.0" styleClass="h6" text="Ecrit par" />
+            <Label layoutX="511.0" layoutY="33.0" styleClass="h6" text="Dirigé par" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="21.0" layoutY="551.0" prefHeight="200.0" prefWidth="1003.0" style="-fx-background-color: #fff; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="27.0" styleClass="h5" text="Fichiers du projet">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="loader" layoutX="26.0" layoutY="26.0" onDragDropped="#load" prefHeight="159.0" prefWidth="622.0" style="-fx-background-color: #f2f2f2; -fx-border-style: dashed;" styleClass="draggable_area" stylesheets="@../css/style.css">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="130.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/undraw_add_file2_gvbb%20(1)%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="271.0" layoutY="42.0" text="Selectionner fichiers">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="271.0" layoutY="80.0" styleClass="h6" text="Draguez les fichiers ici ou cliquez" />
+                  <Hyperlink layoutX="478.0" layoutY="79.0" onAction="#open" text="Parcourir" />
+               </children>
+            </AnchorPane>
+            <ListView fx:id="listFiles" layoutX="668.0" layoutY="26.0" prefHeight="159.0" prefWidth="308.0" />
+            <Hyperlink layoutX="668.0" layoutY="3.0" onAction="#clear" text="Vider les fichiers" underline="true" />
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="878.0" layoutY="787.0" onAction="#create" prefHeight="35.0" prefWidth="142.0" styleClass="primary_btn" text="Creer Projet" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

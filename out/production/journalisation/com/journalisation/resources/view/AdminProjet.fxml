@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color:#fff" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.controller.AdminProjetController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="51.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="51.0">
+         <children>
+            <ListView fx:id="pojectlist" prefWidth="341.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="40.0" />
+            <AnchorPane prefHeight="30.0" prefWidth="200.0" styleClass="card-view" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+               <children>
+                  <FontAwesomeIconView glyphName="SEARCH" layoutX="321.0" layoutY="20.0" onMouseClicked="#searchclick" size="15" />
+                  <TextField fx:id="searchfield" layoutX="8.0" layoutY="2.0" onKeyReleased="#searchkey" prefHeight="27.0" prefWidth="308.0" style="-fx-background-color: white; -fx-border-color: transparent;" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="309.0" prefHeight="866.0" prefWidth="926.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="352.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="60.0" AnchorPane.topAnchor="254.0">
+               <children>
+                  <AnchorPane layoutX="6.0" layoutY="235.0" prefHeight="537.0" styleClass="card-view" AnchorPane.bottomAnchor="15.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="25.0" layoutY="12.0" prefHeight="26.0" prefWidth="80.0" styleClass="h3" text="Taches" underline="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="25.0" layoutY="38.0" AnchorPane.bottomAnchor="9.0" AnchorPane.topAnchor="38.0">
+                           <children>
+                              <ListView fx:id="alltask" layoutY="32.0" prefHeight="457.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="31.0" />
+                              <Label layoutX="2.0" layoutY="11.0" styleClass="h6" text="Taches - ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="taskcount" layoutX="58.0" layoutY="11.0" styleClass="h6" text="Taches - ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="460.0" layoutY="39.0" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="39.0">
+                           <children>
+                              <ListView fx:id="completedtask" layoutX="8.0" layoutY="31.0" prefHeight="457.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="31.0" />
+                              <Label layoutX="9.0" layoutY="10.0" styleClass="h6" text="Taches completées - ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="completedcount" layoutX="140.0" layoutY="10.0" styleClass="h6" text="Taches - ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <JFXButton layoutX="826.0" layoutY="13.0" onAction="#createTask" ripplerFill="TRANSPARENT" style="-fx-background-color: #ffbb80;" text="+ Assignation de tache" textFill="WHITE" AnchorPane.rightAnchor="22.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font></JFXButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="45.0" prefWidth="926.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" layoutX="36.0" layoutY="-15.0" prefHeight="45.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/time.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="time" styleClass="h6" text="0" />
+                        <Label styleClass="h6" text="jours ecoulés depuis la creation du projet" />
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="btn_export" layoutX="856.0" layoutY="10.0" onAction="#export" styleClass="primary_btn" text="Exporter le projet" textFill="WHITE" AnchorPane.rightAnchor="5.0" />
+               </children>
+            </AnchorPane>
+            <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="926.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label styleClass="h3" text="Titre">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text=":">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="project_name" styleClass="h5">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <AnchorPane prefHeight="204.0" prefWidth="916.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="52.0">
+               <children>
+                  <Label layoutY="9.0" styleClass="h6" text="Les Fichiers du Projet" AnchorPane.topAnchor="9.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="187.0" prefWidth="916.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="17.0">
+                     <children>
+                        <TableView fx:id="tableProjet" onMouseClicked="#openselected" prefHeight="140.0" styleClass="tabs" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+                          <columns>
+                            <TableColumn fx:id="titre" prefWidth="75.0" text="Titre" />
+                            <TableColumn fx:id="type" prefWidth="75.0" text="Type" />
+                              <TableColumn fx:id="modified" prefWidth="75.0" text="Last Update" />
+                              <TableColumn fx:id="pages" prefWidth="75.0" text="Pages" />
+                              <TableColumn fx:id="mots" prefWidth="75.0" text="Mots" />
+                              <TableColumn fx:id="actions" prefWidth="75.0" text="Actions" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <JFXButton fx:id="uploadButton" layoutX="833.0" layoutY="2.0" onAction="#upload" styleClass="primary_btn" text="Telecharger des ressources du projet" textFill="WHITE" underline="true" AnchorPane.rightAnchor="2.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Label layoutX="10.0" layoutY="4.0" styleClass="h1" text="Liste des Projets">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="667.0" prefWidth="853.0" style="-fx-background-color: #fff;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.controller.ProjectItemController">
+   <children>
+      <VBox layoutX="14.0" layoutY="13.0">
+         <children>
+            <Label fx:id="title" alignment="TOP_LEFT" prefHeight="41.0" prefWidth="357.0" styleClass="h1" text="Titre" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="subtitle" prefHeight="27.0" prefWidth="67.0" styleClass="h5" stylesheets="@../css/style.css" text=" Label" />
+         </children>
+      </VBox>
+      <Label layoutX="690.0" layoutY="39.0" styleClass="h6" stylesheets="@../css/style.css" text="Créé le:" AnchorPane.rightAnchor="117.0" />
+      <Label fx:id="created" layoutX="763.0" layoutY="39.0" prefHeight="20.0" prefWidth="104.0" styleClass="h6" stylesheets="@../css/style.css" text="Label" AnchorPane.rightAnchor="11.0" />
+      <JFXButton fx:id="uploadFiles" layoutX="727.0" layoutY="634.0" onAction="#upload" styleClass="primary_btn" text="Telecharger fichier" textFill="WHITE" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="12.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <VBox layoutX="14.0" layoutY="99.0" prefHeight="520.0" prefWidth="833.0" spacing="30.0" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="99.0">
+         <children>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="484.0" prefWidth="801.0" styleClass="card-view">
+               <children>
+                  <Label layoutX="21.0" layoutY="14.0" styleClass="h6" text="Liste des Fichiers" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane fx:id="contentview" layoutX="12.0" layoutY="32.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="31.0">
+                     <content>
+                        <FlowPane fx:id="doclist" hgap="10.0" vgap="10.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <TitledPane animated="false" text="Taches">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="taches" layoutX="65.0" layoutY="-36.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

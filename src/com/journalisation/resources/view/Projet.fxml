@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="548.0" prefWidth="985.0" styleClass="paneFrame" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.controller.NewProjectController">
+   <children>
+      <AnchorPane layoutX="51.0" layoutY="14.0" prefHeight="235.0" prefWidth="390.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <VBox layoutX="127.0" layoutY="37.0" prefHeight="349.0" prefWidth="586.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0">
+               <children>
+                  <AnchorPane prefHeight="57.0" prefWidth="530.0">
+                     <children>
+                        <HBox alignment="CENTER" layoutX="106.0" prefHeight="79.0" prefWidth="200.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox prefHeight="57.0" prefWidth="241.0">
+                                 <children>
+                                    <Label styleClass="h6" text="Titre du livre:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField prefHeight="40.0" prefWidth="391.0" promptText="Exemple: Title" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="348.0" layoutY="10.0" prefHeight="57.0" prefWidth="241.0">
+                                 <children>
+                                    <Label styleClass="h6" text="Sous-titre du livre:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField prefHeight="40.0" prefWidth="391.0" promptText="Exemple: Title" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="474.0" layoutY="10.0" prefHeight="57.0" prefWidth="241.0">
+                                 <children>
+                                    <Label styleClass="h6" text="Date reception:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker prefHeight="32.0" prefWidth="230.0" promptText="01/12/2000" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="57.0" prefWidth="530.0">
+                     <children>
+                        <HBox alignment="CENTER" layoutX="106.0" prefHeight="79.0" prefWidth="200.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox prefHeight="59.0" prefWidth="141.0">
+                                 <children>
+                                    <Label styleClass="h6" text="Nombre de page:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField prefHeight="34.0" prefWidth="203.0" promptText="Exemple: 102" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="348.0" layoutY="10.0" prefHeight="59.0" prefWidth="126.0">
+                                 <children>
+                                    <Label styleClass="h6" text="Nombre de mots:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField prefHeight="40.0" prefWidth="391.0" promptText="Exemple: 3000" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="474.0" layoutY="10.0" prefHeight="57.0" prefWidth="218.0">
+                                 <children>
+                                    <Label styleClass="h6" text="Genre:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox prefHeight="33.0" prefWidth="215.0" promptText="Exemple: Roman" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="356.0" layoutY="10.0" prefHeight="57.0" prefWidth="213.0">
+                                 <children>
+                                    <Label styleClass="h6" text="Format document">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField prefHeight="40.0" prefWidth="391.0" promptText="Exemple: docx" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <Line endX="815.2929077148438" endY="-0.41421353816986084" startX="-100.0">
+                     <rotationAxis>
+                        <Point3D x="1.0" y="1.0" z="1.0" />
+                     </rotationAxis>
+                  </Line>
+                  <HBox alignment="CENTER" prefHeight="237.0" prefWidth="917.0" spacing="30.0">
+                     <children>
+                        <VBox fx:id="dirige" prefHeight="237.0" prefWidth="310.0">
+                           <children>
+                              <Label styleClass="h6" text="Dirigé par:">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="ecrit" prefHeight="237.0" prefWidth="310.0">
+                           <children>
+                              <Label styleClass="h6" text="Ecrit par:">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label alignment="CENTER" contentDisplay="CENTER" styleClass="h2" text="Creer un nouveau Projet:" textFill="#ff7350" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="941.0" layoutY="15.0" onAction="#closed" styleClass="closable" text="X" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

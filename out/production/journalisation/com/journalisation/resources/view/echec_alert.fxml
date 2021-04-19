@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="273.0" prefWidth="410.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" styleClass="h3" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="155.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons8_cancel_120px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="120.0" layoutY="122.0" styleClass="h3" text="Transaction Echoue" textFill="#7c7979">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="164.0" styleClass="h6" text="c'est dommage, quelque chose a mal tourné" textFill="#6f6d6d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="163.0" layoutY="220.0" prefHeight="29.0" prefWidth="86.0" styleClass="cancel_btn" text="Reessayez" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1010.0" style="-fx-background-color: #f2f2f2;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.controller.DashboardController">
+   <children>
+      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="24.0" layoutY="13.0">
+         <image>
+            <Image url="@../icons/dashboard.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="58.0" layoutY="19.0" styleClass="h6_bold" text="Tableau de bord" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+        <HBox layoutX="5.0" layoutY="42.0" prefHeight="204.0" prefWidth="995.0" spacing="20.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="690.0" style="-fx-background-color: #fff;  -fx-background-radius: 10;">
+               <children>
+                  <Label layoutX="21.0" layoutY="10.0" styleClass="h3" text="Projets Recents">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="606.0" layoutY="24.0" onAction="#allprojects" prefHeight="25.0" prefWidth="67.0" styleClass="primary_btn" text="Voir tout" textFill="WHITE" AnchorPane.rightAnchor="10.0" />
+
+                  <TableView fx:id="projects" layoutX="21.0" layoutY="52.0" prefHeight="147.0" prefWidth="663.0" styleClass="tabs" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="52.0">
+                    <columns>
+                      <TableColumn fx:id="title" prefWidth="330.0" text="TITRE" />
+                      <TableColumn fx:id="received" prefWidth="324.0" text="DATE" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="300.0" layoutY="10.0" prefHeight="200.0" prefWidth="270.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" visible="false">
+               <children>
+                  <Label layoutX="21.0" layoutY="10.0" text="Resume Projets">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="197.0" layoutY="11.0" onAction="#reports" prefHeight="24.0" prefWidth="58.0" style="-fx-background-color: #264f73;" text="Reports" textFill="WHITE" />
+                  <Label layoutX="18.0" layoutY="46.0" text="Projects Number">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="80.0" text="Total Days Working">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="113.0" text="Efficiency ">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          </children>
+         <padding>
+            <Insets right="15.0" />
+         </padding>
+      </HBox>
+      <AnchorPane prefHeight="351.0" prefWidth="995.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="250.0">
+         <children>
+            <Label layoutX="10.0" layoutY="6.0" styleClass="h3" text="Dernieres Transactions" AnchorPane.leftAnchor="10.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <TableView fx:id="transactions" layoutY="31.0" prefHeight="319.0" prefWidth="555.0" styleClass="tabs" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="35.0">
+              <columns>
+                <TableColumn fx:id="transac" editable="false" prefWidth="75.0" text="Transactions" />
+                <TableColumn fx:id="date" editable="false" prefWidth="75.0" text="Date" />
+                  <TableColumn fx:id="user" editable="false" prefWidth="75.0" text="Users" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <JFXButton layoutX="929.0" layoutY="7.0" onAction="#seeall" styleClass="primary_btn" text="Voir tout" textFill="WHITE" AnchorPane.rightAnchor="10.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

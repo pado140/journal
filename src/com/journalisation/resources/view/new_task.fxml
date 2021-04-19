@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="211.0" prefWidth="430.0" style="-fx-background-color: #fff;" styleClass="paneFrame" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.controller.NewTaskController">
+   <children>
+      <Label layoutX="78.0" layoutY="28.0" styleClass="h3" text="Enregistrer une nouvelle tache" textFill="#7c7976">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="taskField" layoutX="52.0" layoutY="93.0" prefHeight="30.0" prefWidth="316.0" style="-fx-border-color: #ffc5a0;" />
+      <Label layoutX="53.0" layoutY="75.0" styleClass="h6" text="Tache" />
+      <JFXButton layoutX="236.0" layoutY="145.0" onAction="#save" prefHeight="30.0" prefWidth="56.0" styleClass="primary_btn" text="SAVE" textFill="WHITE" />
+      <JFXButton layoutX="310.0" layoutY="145.0" onAction="#cancel" prefHeight="30.0" prefWidth="77.0" styleClass="cancel_btn" text="CANCEL" textFill="WHITE" />
+      <Label layoutX="397.0" layoutY="14.0" onMouseClicked="#closed" text="X">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

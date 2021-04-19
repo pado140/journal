@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="580.0" prefWidth="713.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.controller.ProjectController">
+   <children>
+      <AnchorPane prefHeight="69.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton layoutX="504.0" layoutY="22.0" onAction="#newProjet" styleClass="primary_btn" text="Nouveau Projet" textFill="WHITE" visible="false" AnchorPane.rightAnchor="25.0" />
+            <TextField layoutX="32.0" layoutY="22.0" onKeyReleased="#filter" prefHeight="27.0" prefWidth="258.0" promptText="Recherche projet" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="table_projet" layoutX="7.0" layoutY="69.0" prefHeight="200.0" prefWidth="200.0" styleClass="tabs" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="69.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="title" prefWidth="137.0" text="TITRE" />
+            <TableColumn fx:id="subtitle" prefWidth="102.0" text="SOUS-TITRE" />
+            <TableColumn fx:id="genre" prefWidth="221.0" text="GENRE" />
+            <TableColumn fx:id="action" prefWidth="75.0" text="Actions" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

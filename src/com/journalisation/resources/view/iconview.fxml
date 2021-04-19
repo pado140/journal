@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="185.0" style="-fx-background-color: #fff;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="18.0" layoutY="15.0" prefHeight="141.0" prefWidth="147.0" style="-fx-background-color: #eef;">
+         <children>
+            <ImageView fitHeight="143.0" fitWidth="153.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@1200px-.docx_icon.svg.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="18.0" layoutY="158.0" styleClass="h6" text="Le jour et la nuit.docx" AnchorPane.leftAnchor="18.0" />
+      <Label layoutX="131.0" layoutY="174.0" text="22.5Ko" AnchorPane.rightAnchor="21.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

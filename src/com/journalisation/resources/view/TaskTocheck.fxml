@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="41.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.journalisation.controller.TaskTocheckController">
+    <stylesheets>
+        <URL value="@/com/journalisation/resources/css/style.css" />
+    </stylesheets>
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="taskname" prefHeight="41.0" prefWidth="374.0" text="Label" />
+            <Label fx:id="date" prefHeight="41.0" prefWidth="374.0" text="Label" />
+            <CheckBox fx:id="completed" mnemonicParsing="false" onAction="#check" prefHeight="41.0" prefWidth="228.0" text="Terminée" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

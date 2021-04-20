@@ -221,7 +221,7 @@ public class AdminProjetController extends ControllerManager{
             completetaskpane.setPrefWidth((newValue.doubleValue()/2)-50);
             alltaskpane.setPrefWidth((newValue.doubleValue()/2)-50);
         });
-//        alltask.itemsProperty().bind(new SimpleObjectProperty<>(taskByProject));
+        alltask.itemsProperty().bind(new SimpleObjectProperty<>(taskByProject));
 //        alltask.setCellFactory(value->new EraseItem());
         completedtask.itemsProperty().bind(new SimpleObjectProperty<>(CompleteTaskByProject));
         tableProjet.itemsProperty().bind(new SimpleObjectProperty<>(docs));
@@ -242,6 +242,7 @@ public class AdminProjetController extends ControllerManager{
             if(!b && getItem()!=null){
                 render(taskView);
             }
+            alltask.refresh();
         }
         
         private void render(TaskView taskView){
@@ -304,12 +305,11 @@ public class AdminProjetController extends ControllerManager{
         for(TaskProject tp:tasks_projects){
             System.out.println("task state:"+tp.getState());
             if(Objects.equals(tp.getState(),TaskState.E))
-                taskByProject.add(new TaskView(tp,true,alltask));
+                taskByProject.add(new TaskView(tp,true));
             else
-                CompleteTaskByProject.add(new TaskView(tp,false,alltask));
-            viewTask.add(new TaskView(tp,false,alltask));
+                CompleteTaskByProject.add(new TaskView(tp,false));
+            viewTask.add(new TaskView(tp,false));
         }
-        alltask.setItems(taskByProject);
     }
     private class ActionsCell extends TableCell<Ressources,Ressources> {
         private Boutton delete,edit,view;

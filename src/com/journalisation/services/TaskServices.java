@@ -26,8 +26,7 @@ public class TaskServices {
     }
     
     public static ObservableList<TaskProject> getByProject(Livres livre){
-        ObservableList<TaskProject> tasks=DAOFactory.createModel(DAOName.task_project).csearchBy("livre_id=?",new Object[]{livre.getId()},"livre_id"
-                ,"tasks","created","state","duree","id");
+        ObservableList<TaskProject> tasks=DAOFactory.createModel(DAOName.task_project).search("livre_id=?",false,livre.getId());
 //        tasks.forEach(t->{
 //            t.setUser(DAOFactory.createModel(DAOName.task));
 //        });

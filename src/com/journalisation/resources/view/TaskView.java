@@ -4,21 +4,18 @@ import javafx.scene.Parent;
 import javafx.scene.layout.AnchorPane;
 import com.journalisation.controller.ATaskController;
 import com.journalisation.dao.bean.TaskProject;
-import javafx.scene.control.ListView;
 
 public class TaskView extends AnchorPane {
     private TaskProject task;
     private ATaskController project;
     private Parent content;
-    private ListView parent;
 
-    public TaskView(TaskProject task,boolean t,ListView p) {
+    public TaskView(TaskProject task,boolean t) {
         this.task = task;
-        this.parent=p;
         ViewBehavior loadProject=new ViewBehavior("a_task.fxml");
         content=loadProject.getparent();
         project=(ATaskController)loadProject.getController();
-        project.setTasks(task,p);
+        project.setTasks(task);
         project.getDel().setVisible(t);
         doLayout();
 

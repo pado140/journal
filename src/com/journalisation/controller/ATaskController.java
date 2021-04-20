@@ -5,6 +5,7 @@ import static com.journalisation.Main.primarystage;
 import static com.journalisation.Main.rbs;
 import com.journalisation.alert.Alert;
 import com.journalisation.alert.AlertButtons;
+import com.journalisation.dao.bean.Livres;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import com.journalisation.dao.bean.TaskProject;
@@ -16,8 +17,6 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.stream.Collectors;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.scene.control.ListView;
 
 public class ATaskController extends ControllerManager {
     @FXML
@@ -28,15 +27,14 @@ public class ATaskController extends ControllerManager {
     
     @FXML
     private JFXButton del;
-    
-    private ListView parent;
 
     @FXML
     boolean delete() {
         if(Alert.showConfirmMessage(primarystage, "Voulez vous supprimer cette tache", rbs)==AlertButtons.YES){
+            Livres l=tasks.getLivre();
                     if(DAOFactory.createModel(DAOName.task_project).delete(tasks)){
-                        parent.getItems().remove(tasks);
-                        parent.refresh();
+                        Alert.success(primarystage, "Tache supprime avec succes", rbs);
+                        loadprojetinfo(l);
                     }
                 }
         return false;
@@ -48,7 +46,7 @@ public class ATaskController extends ControllerManager {
         return tasks;
     }
 
-    public void setTasks(TaskProject tasks,ListView p) {
+    public void setTasks(TaskProject tasks) {
         this.tasks = tasks;
         System.out.println(tasks.getTasks());
          task.setText(tasks.getTasks());
@@ -57,7 +55,6 @@ public class ATaskController extends ControllerManager {
                         + " p on(p.user_id=user.id) where livre_id=? and task=? and state=?",
                 tasks.getLivre().getId(),tasks.getTasks(),tasks.getState().toString());
          user_task.setText(String.join(",",users.parallelStream().map(u->{return ""+new Users(u);}).collect(Collectors.toCollection(ArrayList::new))));
-         parent=p;
     }
 
     @Override

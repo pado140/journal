@@ -31,16 +31,16 @@
          <children>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="254.0">
                <children>
-                  <AnchorPane fx:id="taskpane" layoutX="6.0" layoutY="235.0" prefHeight="537.0" styleClass="card-view" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane fx:id="taskpane" layoutX="6.0" layoutY="235.0" styleClass="card-view" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <Label layoutX="25.0" layoutY="12.0" prefHeight="26.0" prefWidth="80.0" styleClass="h3" text="Taches" underline="true">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Label>
-                        <AnchorPane fx:id="alltaskpane" layoutX="29.0" layoutY="39.0" prefHeight="488.0" prefWidth="404.0" AnchorPane.leftAnchor="28.0">
+                        <AnchorPane fx:id="alltaskpane" layoutX="29.0" layoutY="39.0" prefWidth="404.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="39.0">
                            <children>
-                              <ListView fx:id="alltask" layoutY="32.0" prefHeight="457.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0" />
+                              <ListView fx:id="alltask" layoutY="32.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0" />
                               <Label layoutX="2.0" layoutY="11.0" styleClass="h6" text="Taches - ">
                                  <font>
                                     <Font size="14.0" />
@@ -53,9 +53,9 @@
                               </Label>
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="completetaskpane" layoutX="274.0" layoutY="39.0" prefHeight="488.0" prefWidth="404.0" AnchorPane.rightAnchor="27.0">
+                        <AnchorPane fx:id="completetaskpane" layoutX="274.0" layoutY="39.0" prefWidth="404.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="39.0">
                            <children>
-                              <ListView fx:id="completedtask" layoutX="8.0" layoutY="31.0" prefHeight="457.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0" />
+                              <ListView fx:id="completedtask" layoutX="8.0" layoutY="31.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0" />
                               <Label layoutX="9.0" layoutY="10.0" styleClass="h6" text="Taches completées - ">
                                  <font>
                                     <Font size="14.0" />
